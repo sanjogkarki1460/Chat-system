@@ -3,6 +3,9 @@
 use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
+if (env('APP_ENV') === 'production') {
+    URL::forceSchema('https');
+}
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,7 +16,7 @@ Route::get('/', function () {
 route::post('/send', 'ChatController@send')->middleware('auth');
 route::get('/user', 'ChatController@Getalluser')->middleware('auth');
 route::get('/user/{id}', 'ChatController@Getfrienddetail')->middleware('auth');
-route::get('/message/{id}','ChatController@GetAllMessage')->middleware('auth');
+route::get('/message/{id}', 'ChatController@GetAllMessage')->middleware('auth');
 Auth::routes();
 
 
