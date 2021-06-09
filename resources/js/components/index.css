@@ -1,0 +1,17 @@
+.list-group{
+    overflow-y: scroll;
+    height: 250px;
+}
+
+/* list-group, li
+{
+    padding:0;
+    margin:0;
+}
+list-group li
+{
+  list-style:none;
+  background:no-repeat right center;
+  padding-right:20px;
+  text-align:right;
+} */
