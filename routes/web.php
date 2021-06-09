@@ -4,9 +4,9 @@ use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 
-// if (env('APP_ENV') === 'production') {
-//     URL::forceSchema('https');
-// }
+if (env('APP_ENV') === 'production') {
+    URL::forceSchema('https');
+}
 
 Route::get('/', function () {
     return view('welcome');
