@@ -22,5 +22,5 @@ Auth::routes();
 
 
 Route::get('/{any?}', function () {
-    return view('Home');
+    return view('home');
 })->where('any', '^(?!api).*$');
